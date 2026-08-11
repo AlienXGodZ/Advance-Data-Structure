@@ -1,0 +1,44 @@
+public class Test5 {
+
+    static void postorder(node root){
+
+        if(root == null){
+            return;
+        }
+
+   
+
+        postorder(root.left);
+
+        postorder(root.right);
+
+        System.out.print(root.data + " ");
+
+
+
+    }
+
+
+
+
+    public static void main(String[] args){
+
+        node root = new node(50);
+
+        root.left = new node(30);
+        root.right = new node(70);
+
+        root.left.left = new node(20);
+        root.left.right = new node(40);
+
+        root.right.left = new node(60);
+        root.right.right = new node(80);
+
+        postorder(root);
+
+
+
+
+
+    }
+}
