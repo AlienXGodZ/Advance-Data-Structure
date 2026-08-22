@@ -169,6 +169,20 @@ class maxheap{
 
     }
 
+    public void buildmaxheap(int[] arr){
+
+        heap = arr;
+        size = arr.length;
+
+        for(int i = size / 2 -1 ; i >= 0 ; i--){
+
+            heapifydown(i);
+
+        }
+
+
+    }
+
 }
 
  public class Test17{
@@ -199,12 +213,10 @@ class maxheap{
             System.out.println("NOT FOUNDED");
         }
 
+        int[] arr = {60,70,80,90};
+        heap.buildmaxheap(arr);
 
-
-
-
-
-
+        heap.print();
 
 
     }

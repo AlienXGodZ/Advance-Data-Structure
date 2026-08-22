@@ -160,6 +160,18 @@ class minheap{
         }
         System.out.println();
     }
+
+    public void buildminheap(int[] arr){
+
+        heap = arr;
+        size = arr.length;
+
+        for(int i = size / 2 -1; i >= 0 ; i--){
+            heapifydown(i);
+        }
+    }
+
+
 }
 
 
@@ -187,6 +199,10 @@ public class Test18 {
         }else{
             System.out.println("VALUE NOT FOUND");
         }
+
+        int[] arr = {90,80,70,60};
+
+        heap.buildminheap(arr);
 
     }
 }
