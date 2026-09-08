@@ -54,7 +54,7 @@ public class Test42{
 
             if (!visited[i]) {
 
-                fillorder(graph, stack, visited, 0);
+                fillorder(graph, stack, visited, i);
 
             }
         }
